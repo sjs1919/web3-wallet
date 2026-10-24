@@ -1,0 +1,43 @@
+# 敏感配置（私钥/助记词/密钥，切勿提交）
+.env
+.env.local
+*.local.md
+credentials.local.md
+*.pem
+*.key
+*keystore*
+
+# Java / Maven
+target/
+*.class
+*.jar
+*.war
+.mvn/
+
+# Node / Vue3
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# 日志 / 构建 / 临时
+logs/
+*.log
+coverage*
+tmp/
+*.db
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Claude Code 本地缓存（保留 settings.json 与 hooks/ 供模板启用）
+.claude/*
+!.claude/settings.json
+!.claude/hooks/
+
+# 运行时生成（CodeGraph / Understand-Anything 索引）
+.codegraph/
+.understand-anything/
