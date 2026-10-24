@@ -36,7 +36,9 @@
 
 ## 环境
 
-- Java 17、Node >= 18、Maven 3.9+
-- 测试 / 构建 / Docker 在 **WSL** 下执行
+- Java 17（JDK 17.0.20）+ Maven 3.6.3（WSL 已装，root）；Node >= 18
+- 测试 / 构建 / Docker 在 **WSL** 下执行（`wsl -d Ubuntu-22.04`）
+- **WSL 免密 root**：`wsl -d Ubuntu-22.04 -u root`（sudo 需密码时用它）
+- **阿里云 Maven 镜像已配置**：`/root/.m2/settings.xml`（maven.aliyun.com）
 - 本地链：Foundry `anvil`（默认 8545）
 - 代理：家里 Clash `7890` / 公司 `3450`（如访问外部模型/源）
