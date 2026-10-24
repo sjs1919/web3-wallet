@@ -9,18 +9,18 @@
 - 🚫 **禁止自动 git**：commit / push 必须用户发起
 - 🚫 **私钥/助记词等敏感信息严禁入库**：只留占位符，真实值在 `docs/credentials.local.md`（gitignored）或环境变量
 - 🚫 **金额用 BigDecimal，禁止 float/double**
-- 🚫 **未测试禁止部署**：`mvn test` 全过 + 前端 `npm run build` 成功才可提请部署
+- 🚫 **未测试禁止部署**：`cd backend && mvn test` 全过 + 前端 `npm run build` 成功才可提请部署
 
 ## 命令
 
 | 命令 | 说明 |
 |------|------|
-| `mvn test` | 后端全量单测（WSL 下） |
-| `mvn -pl <模块> test` | 单模块测试 |
-| `mvn compile` | 后端编译 |
+| `cd backend && mvn test` | 后端全量单测（WSL 下） |
+| `cd backend && mvn -pl <模块> test` | 单模块测试 |
+| `cd backend && mvn compile` | 后端编译 |
 | `cd web && npm run build` | 前端构建（WSL 下，含 vue-tsc 类型检查） |
 | `anvil` | 本地链（Foundry，默认 8545） |
-| `mvn spring-boot:run` | 单服务启动 |
+| `cd backend && mvn spring-boot:run` | 单服务启动 |
 
 ## 编码原则
 

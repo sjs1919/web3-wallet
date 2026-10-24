@@ -19,15 +19,17 @@
 
 ```
 web3-wallet/
-├── rules/                 # 项目编码规范（common / stack-java / stack-vue3）
-├── docs/             # 文档仓（01-requirements ~ 11-manuals）
-├── gateway/               # Spring Cloud Gateway 网关
-├── account-service/       # 账户/地址/钱包管理服务
-├── deposit-scanner/       # 充值扫描服务（后续阶段）
-├── withdrawal-service/    # 提现签名服务（后续阶段）
-├── common/                # 公共模块（统一响应/异常/错误码）
+├── backend/               # 后端（Maven 多模块根）
+│   ├── pom.xml            # Maven 多模块根
+│   ├── common/            # 公共模块（统一响应/异常/错误码）
+│   ├── gateway/           # Spring Cloud Gateway 网关
+│   ├── account-service/   # 账户/地址/钱包管理服务
+│   ├── deposit-scanner/   # 充值扫描服务（后续阶段）
+│   └── withdrawal-service/ # 提现签名服务（后续阶段）
 ├── web/                   # Vue3 前端
-├── pom.xml                # Maven 多模块根
+├── deploy/                # 部署相关（Dockerfile / docker-compose / 部署脚本）
+├── docs/                  # 文档仓（01-requirements ~ 11-manuals）
+├── rules/                 # 项目编码规范（common / stack-java / stack-vue3）
 └── CLAUDE.md
 ```
 
@@ -35,7 +37,7 @@ web3-wallet/
 
 1. 启动本地链：`anvil`（Foundry）
 2. 启动 Nacos：`docker run -p 8848:8848 nacos/nacos-server`（或本地）
-3. 启动后端服务：`mvn -pl account-service spring-boot:run`
+3. 启动后端服务：`cd backend && mvn -pl account-service spring-boot:run`
 4. 启动前端：`cd web && npm install && npm run dev`
 
 ## 参照与路线
