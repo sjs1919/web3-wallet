@@ -20,7 +20,7 @@
 ```
 web3-wallet/
 ├── rules/                 # 项目编码规范（common / stack-java / stack-vue3）
-├── docs/demo/             # 文档仓（01-requirements ~ 11-manuals）
+├── docs/             # 文档仓（01-requirements ~ 11-manuals）
 ├── gateway/               # Spring Cloud Gateway 网关
 ├── account-service/       # 账户/地址/钱包管理服务
 ├── deposit-scanner/       # 充值扫描服务（后续阶段）
