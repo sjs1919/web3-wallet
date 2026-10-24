@@ -3,8 +3,8 @@
 ## 版本基线
 
 - **Java 17 固定**（Spring Boot 3.x 最低要求，生产服务器不支持更高版本则禁止升级）
-- Spring Boot 3.2.x + Spring Cloud Alibaba 2023.0.x（与 Spring Cloud 2023.0.x 版本对齐）+ Nacos 2.3.x
-- web3j 4.9.x
+- **Spring Boot 3.2.4** + **Spring Cloud 2023.0.1** + **Spring Cloud Alibaba 2023.0.1.0** + Nacos 2.3.2（版本精确对齐，backend/pom.xml dependencyManagement 锁定，禁止漂移）
+- web3j **4.9.7**
 - 数据库连接池：HikariCP（Spring Boot 3 自带，无需额外引入）
 - 分库分表（扩展期引入）：Apache ShardingSphere-JDBC 5.4.x（第一版不引入，按需启用）
 
