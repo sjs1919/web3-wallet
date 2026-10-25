@@ -21,6 +21,9 @@
 | `cd web && npm run build` | 前端构建（WSL 下，含 vue-tsc 类型检查） |
 | `anvil` | 本地链（Foundry，默认 8545） |
 | `cd backend && mvn spring-boot:run` | 单服务启动 |
+| `docker compose -f deploy/docker-compose.yml up -d` | 拉起 Nacos/MySQL/Redis（WSL 下） |
+| `bash deploy/start-services.sh` | 后台启动全部后端服务（日志在 WSL `/root/logs/web3-wallet/`） |
+| `bash deploy/stop-services.sh` | 停止全部后端服务 |
 
 ## 编码原则
 

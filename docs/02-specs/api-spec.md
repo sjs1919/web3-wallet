@@ -30,3 +30,19 @@
 | 方法 | 路径 | 说明 |
 |------|------|------|
 | GET | `/api/v1/account/health` | 经网关路由到 account-service |
+
+### 充值扫描服务（deposit-scanner，8082）
+
+| 方法 | 路径 | 说明 | 请求 | 响应 |
+|------|------|------|------|------|
+| GET | `/deposit/health` | 健康检查 | - | `Result<String>` |
+
+> 网关路由待业务逻辑接入时补充。
+
+### 提现服务（withdrawal-service，8083）
+
+| 方法 | 路径 | 说明 | 请求 | 响应 |
+|------|------|------|------|------|
+| GET | `/withdrawal/health` | 健康检查 | - | `Result<String>` |
+
+> 网关路由待业务逻辑接入时补充。

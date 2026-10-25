@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 /**
  * 账户 / 地址 / 钱包管理服务入口。
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.sjs.wallet")
 @EnableDiscoveryClient
 @EnableFeignClients
 public class AccountServiceApplication {
